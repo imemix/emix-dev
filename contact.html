@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" class="terminal">
+
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact – Bash Terminal Theme</title>
+    <meta name="description" content="Get in touch">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#00ffff">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome is no longer required for social icons, using PNGs instead -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p+U8w5zC5lqVx27hOB9x6khk1qHvh7rnHg0E2N+H6rJlP6K6Ho5rXJbG+XhcgFjXx6LvsO2k9myU6B+r8V9vNw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+ </head>
+      <header>
+        <nav class="nav-bar">
+          <div class="logo">EMIX DEV</div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+          <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="active"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+ <body class="terminal">
+   <div class="container">
+
+
+   <main class="main-content-contact">
+     <section class="section-cdd">
+         <p>Upload your request through the secure grid.</p>
+
+       <!-- Netlify form: name must match form-name hidden field -->
+       <form id="contact-form" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify netlify-honeypot="bot-field" class="contact-form">
+         <!-- required hidden input for Netlify to identify the form -->
+         <input type="hidden" name="form-name" value="contact">
+         <!-- honeypot field to trap bots -->
+         <p class="hidden">
+           <label>Don't fill this out if you're human: <input name="bot-field"></label>
+         </p>
+         <input type="text" placeholder="Name" name="name" id="name" required>
+         <input type="email" placeholder="Email" name="email" id="email" required>
+         <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+         <button type="submit">Submit</button>
+       </form>
+       <!-- placeholder for response message -->
+       <div id="form-response" aria-live="polite" style="margin-top:1rem;color:var(--secondary-color);"></div>
+       
+     </section>
+     
+   </main>
+  <script src="js/main.js"></script>
+  
+  </div>
+ </body>
+ <footer>
+    <div class="footer-left">
+      &copy; 2026 EMIX DEV
+    </div>
+    <div class="footer-right">
+      <a href="contact.html">Contact</a>
+      <div class="social">
+        <a href="https://youtube.com/imemix" aria-label="YouTube" target="_blank" rel="noopener">
+          <img src="src/badges/youtube.png" alt="YouTube">
+        </a>
+        <a href="https://github.com/imemix" aria-label="GitHub" target="_blank" rel="noopener">
+          <img src="src/badges/github.png" alt="GitHub">
+        </a>
+        <a href="https://discord.gg/imemix" aria-label="Discord" target="_blank" rel="noopener">
+          <img src="src/badges/discord.png" alt="Discord">
+        </a>
+      </div>
+    </div>
+  </footer>
+</html>
