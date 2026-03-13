@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         repoList.innerHTML = '';
         const frag = document.createDocumentFragment();
 
-        const repos = data.slice(0, 6);
+        const repos = data.slice(0, 3);
 
         repos.forEach((repo, idx) => {
           const item = document.createElement('div');
           item.className = 'project-item';
 
-          if (idx % 6 === 0) {
+          if (idx % 3 === 0) {
             item.classList.add('large');
           }
 
