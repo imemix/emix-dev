@@ -1,36 +1,37 @@
 /* page layout and sections */
 main {
-  padding: 1rem;
-  flex: 2;
-  
+	padding: 1rem;
+	flex: 2;
 }
+
 .section-cdd h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-  border-bottom: 1px solid var(--accent-color);
-  padding-bottom: 0.3rem;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: var(--text-color);
+	border-bottom: 1px solid var(--accent-color);
+	padding-bottom: 0.3rem;
 }
+
 .section-cdd {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .section-cdd p {
-  margin: 0.5rem 0;
-  display: flex;
-  align-self: center;
-  top: 50%;
+	margin: 0.5rem 0;
+	display: flex;
+	align-self: center;
+	top: 50%;
 }
 
 .section-cdd h2 {
-  border-bottom: 1px solid var(--accent-color);
-  padding-bottom: 0.3rem;
+	border-bottom: 1px solid var(--accent-color);
+	padding-bottom: 0.3rem;
 }
 
 .section-cdd.terminal-snippets {
-  padding: 0.5rem;
+	padding: 0.5rem;
 }

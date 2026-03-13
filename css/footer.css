@@ -1,71 +1,73 @@
 /* footer and social links */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  bottom: 0;
-  padding: 1rem 2rem;
-  background: rgba(26, 26, 26, 0.384);
-  backdrop-filter: blur(4px);
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	bottom: 0;
+	padding: 1rem 2rem;
+	background: rgba(26, 26, 26, 0.384);
+	backdrop-filter: blur(4px);
+	z-index: 1000;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
-  color: #33ff33;
-  text-decoration: none;
-  font-size: 0.9rem;
+	color: #33ff33;
+	text-decoration: none;
+	font-size: 0.9rem;
 }
 
 footer a:hover,
 footer a:focus {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 footer .social {
-  display: flex;
-  gap: 0.5rem;
+	display: flex;
+	gap: 0.5rem;
 }
 
 footer .social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: rgba(51,255,51,0.1);
-  border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	background: rgba(51, 255, 51, 0.1);
+	border-radius: 50%;
+	transition:
+		background 0.2s,
+		color 0.2s;
 }
 
 footer .social a img {
-  max-width: 60%;
-  max-height: 60%;
-  display: block;
+	max-width: 60%;
+	max-height: 60%;
+	display: block;
 }
 
 footer .social a:hover,
 footer .social a:focus {
-  background: rgba(51,255,51,0.3);
-  color: #000;
+	background: rgba(51, 255, 51, 0.3);
+	color: #000;
 }
 
 footer .footer-left {
-  text-align: left;
-  font-size: 0.85rem;
+	text-align: left;
+	font-size: 0.85rem;
 }
 
 .social-icon-youtube {
-  filter: drop-shadow(0 0 1px #000000);
+	filter: drop-shadow(0 0 1px #000000);
 }
 
 .social-icon-github {
-  filter: drop-shadow(0 0 1px #000000);
-  color: #000000;
+	filter: drop-shadow(0 0 1px #000000);
+	color: #000000;
 }
 
 .social-icon-discord {
-  filter: drop-shadow(0 0 1px #000000);
-  color: #7289da;
+	filter: drop-shadow(0 0 1px #000000);
+	color: #7289da;
 }
