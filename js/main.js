@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if (hamburger && navLinks) {
-    // ensure the button has proper aria attributes
+
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.setAttribute('aria-controls', 'main-nav');
     navLinks.id = 'main-nav';
@@ -18,22 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // close when a link is selected
     navLinks.addEventListener('click', (event) => {
       if (event.target.tagName === 'A') {
         closeMenu();
       }
     });
 
-    // close if user clicks outside the nav on small screens
+
     document.addEventListener('click', (event) => {
-      // faster check using closest
+
       if (!event.target.closest('.nav-links, #hamburger')) {
         closeMenu();
       }
     });
 
-    // reset menu state on resize (so you don't end up with open menu when switching to desktop)
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
@@ -45,22 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-
-
-  // contact form handler removed since no action is performed
-  // const contactForm = document.getElementById('contact-form');
-  // if (contactForm) {
-  //   contactForm.addEventListener('submit', function(event) {
-  //     event.preventDefault();
-  //     const formData = new FormData(contactForm);
-  //     const name = formData.get('name');
-  //     const email = formData.get('email');
-  //     const message = formData.get('message');
-  //   });
-  // }
-
-
-  // GitHub repo grid population
   const repoList = document.getElementById('repo-list');
   if (repoList) {
     async function loadRepos() {
@@ -72,9 +54,15 @@ document.addEventListener('DOMContentLoaded', function() {
         repoList.innerHTML = '';
         const frag = document.createDocumentFragment();
 
-        data.forEach(repo => {
+        const repos = data.slice(0, 6);
+
+        repos.forEach((repo, idx) => {
           const item = document.createElement('div');
           item.className = 'project-item';
+
+          if (idx % 6 === 0) {
+            item.classList.add('large');
+          }
 
           const name = document.createElement('a');
           name.className = 'prop';
@@ -107,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         repoList.appendChild(frag);
 
-        const remainder = data.length % 3;
+        Array.from(repoList.children).forEach(el => el.classList.remove('fullwidth'));
+        const remainder = repos.length % 3;
         if (remainder === 1) {
           const lastItem = repoList.lastElementChild;
           if (lastItem) lastItem.classList.add('fullwidth');

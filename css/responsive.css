@@ -18,10 +18,11 @@
   footer .social a {
     width: 40px;
     height: 40px;
-  }  .nav-links {
+  }
+  .nav-links {
     display: none;
     flex-direction: column;
-    /* make the menu float beneath the bar and cover full width */
+
     position: absolute;
     top: 100%;
     right: 0;
@@ -46,12 +47,47 @@
     cursor: pointer;
   }
   .container {
-    
-    max-width: 500px;
+    max-width: 100%;
+    padding: 0.75rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+  .project-item {
+    padding: 0.75rem 0.75rem;
+  }
+  .project-item .prop {
+    text-align: left;
+  }
+  .project-item button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .project-grid {
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+  .project-item {
+    padding: 0.5rem;
+  }
+  .project-item .prop {
+    font-size: 0.85rem;
+  }
+  .project-item button {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
