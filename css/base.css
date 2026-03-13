@@ -50,7 +50,7 @@ body.terminal {
 }
 
 .container {
-  max-width: 640px;
+  max-width: 840px;
   margin: auto;
   padding: 1rem;
   border-radius: 8px;
@@ -58,6 +58,7 @@ body.terminal {
   backdrop-filter: blur(10px);
   border: 1px solid var(--text-color);
   overflow: auto;
+  height: fit-content;
 }
 
 a {
