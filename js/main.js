@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinks.classList.toggle('open');
     });
 
-    // close menu when a link is clicked (helpful on mobile)
+
     navLinks.addEventListener('click', (event) => {
       if (event.target.tagName === 'A') {
         navLinks.classList.remove('open');
@@ -16,10 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  // contact form behavior (if present)
+
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    // ...existing code...
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+    });
+
   }
 
   // GitHub repo grid population
@@ -36,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const item = document.createElement('div');
           item.className = 'project-item';
 
-          // Repo name (link)
+
           const name = document.createElement('a');
           name.className = 'prop';
           name.href = repo.html_url;
@@ -44,14 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
           name.rel = 'noopener noreferrer';
           name.textContent = repo.name;
 
-          // Repo description
+
           const desc = document.createElement('p');
           desc.className = 'prop';
           desc.style.fontSize = '1rem';
           desc.style.margin = '0.5rem 0';
           desc.textContent = repo.description || 'No description';
 
-          // Repo meta (stars, language)
+
           const meta = document.createElement('div');
           meta.className = 'prop';
           meta.style.flexDirection = 'row';
@@ -62,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `<span title="Stars">⭐ ${repo.stargazers_count}</span>` +
             (repo.language ? ` <span title="Language">🗣️ ${repo.language}</span>` : '');
 
-          // Learn More button
+
           const button = document.createElement('button');
           button.className = 'prop';
           button.textContent = 'Learn More';
