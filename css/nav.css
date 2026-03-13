@@ -1,0 +1,56 @@
+/* navigation bar and links */
+nav.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  background: rgba(26,26,26,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 4px;
+}
+
+.nav-links li.active a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  display: none;
+}
