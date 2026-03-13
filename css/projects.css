@@ -1,8 +1,8 @@
 /* repository/project grid styling */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
+  gap: 0.5rem;
 }
 
 .project-item {

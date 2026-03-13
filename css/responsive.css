@@ -25,4 +25,8 @@
   .hamburger {
     display: block;
   }
+  .container {
+    
+    max-width: 500px;
+  }
 }
