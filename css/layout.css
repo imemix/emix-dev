@@ -2,12 +2,19 @@
 main {
   padding: 1rem;
   flex: 2;
+  
 }
-
+.section-cdd h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 0.3rem;
+}
 .section-cdd {
   margin-bottom: 1.5rem;
   display: flex;
-  
+  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
 }

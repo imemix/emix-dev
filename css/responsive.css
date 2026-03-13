@@ -1,4 +1,19 @@
 /* media queries for responsiveness */
+
+@media (min-width: 801px) {
+  .project-item {
+    max-height: 260px;
+    overflow: hidden;
+  }
+
+  .project-item .repo-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 800px) {
   html, body {
     background-size: cover;

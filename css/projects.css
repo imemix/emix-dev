@@ -13,10 +13,6 @@
   
 }
 
-
-
-
-
 .project-item.large {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
@@ -25,8 +21,6 @@
 .project-item.fullwidth {
   grid-column: 1 / -1; 
 }
-
-
 
 .project-item {
   background-color: var(--nav-bg);
@@ -67,17 +61,4 @@
   cursor: var(--cursor-svg), pointer;
 }
 
-/* Prevent excessive vertical scrolling on desktop by keeping cards compact */
-@media (min-width: 801px) {
-  .project-item {
-    max-height: 260px;
-    overflow: hidden;
-  }
 
-  .project-item .repo-desc {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-  }
-}
