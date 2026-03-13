@@ -18,16 +18,32 @@
   footer .social a {
     width: 40px;
     height: 40px;
-  }
-  .nav-links {
+  }  .nav-links {
     display: none;
     flex-direction: column;
+    /* make the menu float beneath the bar and cover full width */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(26,26,26,0.95);
+    width: 100%;
+    align-items: center;
   }
   .nav-links.open {
     display: flex;
   }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+  }
   .hamburger {
     display: block;
+    cursor: pointer;
   }
   .container {
     

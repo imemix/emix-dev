@@ -11,11 +11,19 @@ nav.nav-bar {
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20px;
+}
 
 .logo {
   font-weight: bold;
   color: var(--text-color);
   font-size: 1.5rem;
+  position: relative;
+  left: 70px;
 }
 
 .nav-links {
