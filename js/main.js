@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        if (window.innerWidth > 600) {
+        if (window.innerWidth > 700) {
           closeMenu();
         }
       }, 150);
@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         repoList.innerHTML = '';
         const frag = document.createDocumentFragment();
 
-        const repos = data.slice(0, 3);
+        const repos = data.slice(0, 6);
 
         repos.forEach((repo, idx) => {
           const item = document.createElement('div');
           item.className = 'project-item';
 
-          if (idx % 3 === 0) {
+          if (idx % 6 === 0) {
             item.classList.add('large');
           }
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         repoList.appendChild(frag);
 
         Array.from(repoList.children).forEach(el => el.classList.remove('fullwidth'));
-        const remainder = repos.length % 3;
+        const remainder = repos.length % 6;
         if (remainder === 1) {
           const lastItem = repoList.lastElementChild;
           if (lastItem) lastItem.classList.add('fullwidth');

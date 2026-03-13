@@ -4,7 +4,7 @@
 }
 
 :root {
-  --bg-color: #0d0d0d;
+  --bg-color: #0d0d0dce;
   --text-color: #33ff33;
   --accent-color: #00ffff;
   --nav-bg: #1a1a1a;
@@ -19,7 +19,7 @@ body {
   background-size: 200% 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-color: linear-gradient(to bottom, #000000, #1b5500);
+  
   animation: bgMove 60s linear infinite;
 }
 
@@ -31,7 +31,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(45deg, #000000, #1b5500, #0d0d0d);
+  
   background-size: 600% 600%;
   animation: gradientBG 20s ease infinite;
   opacity: 0.4;
@@ -54,9 +54,9 @@ body.terminal {
   margin: auto;
   padding: 1rem;
   border-radius: 8px;
-  background-color: #00000017;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--text-color);
+  background-color: #0927006c;
+  backdrop-filter: blur(4px);
+
   overflow: auto;
   height: fit-content;
 }

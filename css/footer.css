@@ -1,20 +1,15 @@
 /* footer and social links */
 footer {
-  background: rgba(26,26,26,0.9);
-  backdrop-filter: blur(6px);
-  color: #33ff33;
-  text-align: center;
-  padding: 1rem 2rem;
-  margin-bottom: 0;
-  position: relative;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  border-top: 1px solid #33ff33;
-  transition: padding 0.3s, flex-direction 0.3s;
+  position: sticky;
+  bottom: 0;
+  padding: 1rem 2rem;
+  background: rgba(26, 26, 26, 0.384);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 footer a {
