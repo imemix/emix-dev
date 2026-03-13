@@ -3,6 +3,10 @@
   html, body {
     background-size: cover;
   }
+  .project-item.large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -28,5 +32,14 @@
   .container {
     
     max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-item.fullwidth {
+    grid-column: 1 / -1; 
   }
 }

@@ -57,7 +57,6 @@ body.terminal {
   background-color: #00000017;
   backdrop-filter: blur(10px);
   border: 1px solid var(--text-color);
-  /* allow content to grow naturally without clipping */
   overflow: auto;
 }
 

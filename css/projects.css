@@ -9,11 +9,7 @@
 }
 
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
 
 .project-item.large {
@@ -25,18 +21,7 @@
   grid-column: 1 / -1; 
 }
 
-@media (max-width: 768px) {
-  .project-item.fullwidth {
-    grid-column: 1 / -1; 
-  }
-}
 
-@media (max-width: 800px) {
-  .project-item.large {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-}
 
 .project-item {
   background-color: var(--nav-bg);
