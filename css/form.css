@@ -42,7 +42,7 @@
 .contact-form button:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
-  cursor: pointer;
+  cursor: var(--cursor-svg), pointer;
 }
 
 .contact-form .hidden {

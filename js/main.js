@@ -81,6 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
           item.appendChild(button);
           repoList.appendChild(item);
         });
+
+        const remainder = data.length % 3;
+        if (remainder === 1) {
+          const lastItem = repoList.lastElementChild;
+          if (lastItem) lastItem.classList.add('fullwidth');
+        }
       })
       .catch(err => {
         console.error('Failed to load repos:', err);
